@@ -1,0 +1,20 @@
+---
+title: "Alt Text"
+author: "Alex Vand"
+date: "8/19/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(palmerpenguins)
+```
+
+```{r, fig.alt = "Histogram of body mass for three penguin species in the Palmer archipelago, indicating the Gentoo species is on average heavier than Adelie and Chinstrap species"}
+
+ggplot(penguins, aes(x = body_mass_g)) +
+  geom_histogram() +
+  facet_wrap(~species)
+```
+
